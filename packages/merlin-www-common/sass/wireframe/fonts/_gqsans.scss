@@ -1,0 +1,35 @@
+@font-face {
+  font-display: swap;
+  font-family: 'GQSANS';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'NORMAL');
+  src: url('/static/fonts/GQSans/GQSans-Regular.otf');
+  src: url('/static/fonts/GQSans/GQSans-Regular.otf?#iefix') format('opentype-font'),
+    url('/static/fonts/GQSans/GQSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'GQSANS';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'BOLD');
+  src: url('/static/fonts/GQSans/GQSans-Bold.otf');
+  src: url('/static/fonts/GQSans/GQSans-Bold.otf?#iefix') format('opentype-fonts'),
+    url('/static/fonts/GQSans/GQSans-Bold.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'GQSANS';
+  font-style: normal;
+  font-weight: map-get($FONT_WEIGHTS, 'EXTENDED BOLD');
+  src: url('/static/fonts/GQSans/GQ-Sans-Extended-Bold.otf');
+  src: url('/static/fonts/GQSans/GQ-Sans-Extended-Bold.otf?#iefix') format('opentype-fonts'),
+    url('/static/fonts/GQSans/GQ-Sans-Extended-Bold.woff2') format('woff2'),
+    url('/static/fonts/GQSans/GQ-Sans-Extended-Bold.woff') format('woff');
+}
+
+$_FONT: 'GQSANS', Times, serif;
+$FONT_GQSANS: map-merge($FONT_GROUP_DEFAULT, (
+    'FAMILY': $_FONT
+));
+$FONT_GROUPS: map-merge($FONT_GROUPS, ('GQSANS': $FONT_GQSANS));
